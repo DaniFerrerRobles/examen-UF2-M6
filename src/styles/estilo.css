@@ -34,12 +34,16 @@
   }
   
   .divCasillaCC {
-    width: 30px;       /* Ajusta el tamaño de la casilla */
-    height: 30px;      /* Ajusta el tamaño de la casilla */
+    width: 10px;       /* Ajusta el tamaño de la casilla */
+    height: 10px;      /* Ajusta el tamaño de la casilla */
     margin: 1px;       /* Espaciado entre las casillas */
     transition: background-color 0.3s ease-in-out; /* Transición para efectos de color */
   }
   
-  .comecocos {
+  .coincide {
     background-color: #ffeb3b;
+  }
+
+  .noCoincide {
+    background-color: white;
   }
