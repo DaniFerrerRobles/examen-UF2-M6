@@ -7,7 +7,7 @@ export const Cuadricula = ({ cuadriculaCC }) => {
       {cuadriculaCC.map((fila, idFila) => (
         <div key={idFila} className="divFila">
           {fila.map((casilla, idCasilla) => (
-            <div key={idCasilla} style={{width: "40px", height: "40px", border: "1px solid", justifyContent: "center"}}></div>
+            <div key={idCasilla} className="divCasilla"></div>
           ))}
         </div>
       ))}
