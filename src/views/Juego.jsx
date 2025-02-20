@@ -12,7 +12,6 @@ const Juego = () => {
 <div>
       <Cuadricula cuadriculaCC = {cuadriculaCC} />
       <ComeCocos iconoCC = {iconoCC} />
-
 </div>
   )
 }
