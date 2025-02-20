@@ -1,0 +1,11 @@
+.divCuadricula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150%;
+    margin-top: 15%;
+  }
+  
+  .divFila {
+    display: flex;
+  }
