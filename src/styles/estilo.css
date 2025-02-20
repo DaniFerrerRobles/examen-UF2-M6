@@ -19,3 +19,27 @@
     align-items: center;
     background-color: black;
   }
+
+.divCC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .divFilaCC {
+    display: flex;
+  }
+  
+  .divCasillaCC {
+    width: 30px;       /* Ajusta el tamaño de la casilla */
+    height: 30px;      /* Ajusta el tamaño de la casilla */
+    margin: 1px;       /* Espaciado entre las casillas */
+    transition: background-color 0.3s ease-in-out; /* Transición para efectos de color */
+  }
+  
+  .comecocos {
+    background-color: #ffeb3b;
+  }
