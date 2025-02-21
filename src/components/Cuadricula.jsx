@@ -14,5 +14,6 @@ export const Cuadricula = ({ cuadriculaCC }) => {
     </div>
   );
 };
+//recorremos la matriz de cuadriculaCC y pintamos las casillas
 
 export default Cuadricula;
