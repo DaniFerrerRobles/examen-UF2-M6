@@ -1,6 +1,5 @@
 import React from "react";
-import "../styles/estilo.css";
-//importamos
+import "../styles/estilo.css"; //importamos el archivo de estilos
 
 export const ComeCocos = ({ iconoCC }) => {
   return (
@@ -17,6 +16,6 @@ export const ComeCocos = ({ iconoCC }) => {
       ))}
     </div>
   );
-};//recorremos la matriz de iconoCC y pintamos las casillas que coinciden con 1 y las que no coinciden con 0
+}; //recorremos la matriz de iconoCC y pintamos las casillas
 
 export default ComeCocos;
