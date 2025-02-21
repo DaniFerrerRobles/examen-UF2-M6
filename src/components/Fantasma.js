@@ -1,18 +1,24 @@
-// src/components/Fantasma.js
+import modelo from './cuadricula';
 
 class Fantasma {
-    constructor() {
-      this.x = 0;
-      this.y = 0;
-      this.estado = "vivo"; // "vivo" o "muerto"
-    }
-  
-    // Método para generar una posición aleatoria dentro de la cuadrícula
-    generaPosicionAleatoria(tamañoCuadricula) {
-      this.x = Math.floor(Math.random() * tamañoCuadricula.length);
-      this.y = Math.floor(Math.random() * tamañoCuadricula[0].length);
-    }
+  constructor() {
+    this.x = 0;
+    this.y = 0;
+    this.estado = 'vivo';
+    this.generaPosicionAleatoria();
   }
-  
-  export default Fantasma;
+
+  generaPosicionAleatoria() {
+    this.x = Math.floor(Math.random() * modelo.matrizCuadricula.length);
+    this.y = Math.floor(Math.random() * modelo.matrizCuadricula.length);
+  }
+}
+
+    const fantasmas = [];
+    for (let i = 0; i < 5; i++) {
+      const fantasma = new Fantasma();
+      fantasmas.push(fantasma);
+    }
+
+export default FantasmaComponent;
   
