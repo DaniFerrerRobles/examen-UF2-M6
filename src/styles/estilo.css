@@ -1,52 +1,30 @@
-.divCuadricula {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 120%;
-    margin-top: 15%;
-  }
-  
-  .divFila {
-    display: flex;
-  }
+/* Estilo para las casillas en la cuadrícula */
+.divCasillaCC {
+  width: 40px;        /* Tamaño de cada casilla en la cuadrícula */
+  height: 40px;       /* Tamaño de cada casilla en la cuadrícula */
+  display: flex;
+}
 
-  .divCasilla {
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
+/* Estilo para las filas del ComeCocos */
+.divFilaCC {
+  display: flex;
+}
 
-.divCC {
-  margin-left: 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .divFilaCC {
-    display: flex;
-  }
-  
-  .divCasillaCC {
-    width: 3px;       /* Ajusta el tamaño de la casilla */
-    height: 3px;      /* Ajusta el tamaño de la casilla */
-  }
-  
-  .coincide {
-    background-color: yellow;
-  }
+/* Estilo para las casillas del ComeCocos */
 
-  .noCoincide {
-    background-color: white;
-  }
 
-  .fantasma {
-    background-color: greenyellow; 
-  }
+/* Estilo para cuando una casilla coincide con el ComeCocos */
+.coincide {
+  background-color: yellow;  /* Color para las casillas que coinciden con el ComeCocos */
+  border: 1px solid yellow;
+  width: 40px;                /* Tamaño consistente con las casillas del ComeCocos */
+  height: 40px;
+}
+
+/* Estilo para las casillas que no coinciden */
+.noCoincide {
+  background-color: black;  /* Color para las casillas que no coinciden */
+  width: 40px;              /* Tamaño de cada casilla en la cuadrícula */
+  height: 40px;             /* Tamaño de cada casilla en la cuadrícula */
+  border: 1px solid white;
+}
