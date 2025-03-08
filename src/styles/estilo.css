@@ -1,38 +1,38 @@
-/* Estilo para las casillas en la cuadrícula */
+/* Estilo para la cuadrícula */
+.divCuadricula {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
+  margin-left: 20%;  /* Centrado de la cuadrícula en la página */
+  position: relative; /* Esto es importante para que los elementos posicionados con 'absolute' dentro de ella funcionen */
+}
+
+/* Estilo para cada fila dentro de la cuadrícula */
+.divFila {
+  display: flex;  /* Esto asegura que las casillas se alineen en línea */
+  width: 100%;    /* Las filas ocupan todo el ancho disponible */
+}
+
+/* Estilo para cada casilla dentro de la cuadrícula */
 .divCasilla {
-  width: 40px;        /* Tamaño de cada casilla en la cuadrícula */
-  height: 40px;       /* Tamaño de cada casilla en la cuadrícula */
-  border: 1px solid #ddd; /* Borde para cada casilla */
+  width: 40px;           /* Tamaño de cada casilla */
+  height: 40px;          /* Tamaño de cada casilla */
+  border: 1px solid #ddd; /* Borde ligero para cada casilla */
   background-color: black; /* Color de fondo para las casillas */
   display: inline-block;
 }
 
-.divCC {
-  width: 40px;        /* Tamaño de cada casilla en la cuadrícula */
-  height: 40px;       /* Tamaño de cada casilla en la cuadrícula */
-  background-color: yellow; /* Color de fondo para las casillas */
-  display: inline-block;
-  margin-left: 60%;
-  margin-top: 5%;
-}
 
 
-
-/* Estilo para el contenedor de la cuadrícula */
-.divCuadricula {
-  display: flex;
-  flex-wrap: wrap;     /* Esto permite que las filas se ajusten automáticamente */
-  width: 800px;        /* 20 columnas * 40px = 800px */
-  height: 800px;       /* 20 filas * 40px = 800px */
-  border: 1px solid black; /* Borde alrededor de la cuadrícula */
-  margin-left: 20%;}
-
-/* Estilo para las filas dentro de la cuadrícula */
-.divFila {
-  display: flex;        /* Distribuye las casillas horizontalmente */
-  width: 100%;          /* Asegura que las filas ocupen todo el espacio disponible */
-}
-
+/* Cuando el ComeCocos coincide con la casilla, le damos un color amarillo */
 .coincide {
-  background-color: yellow;
+  width: 40px;             /* Tamaño de ComeCocos */
+  height: 40px;            /* Tamaño de ComeCocos */
+  background-color: yellow; /* Color amarillo para el ComeCocos */
+}
+
+/* Estilo cuando una casilla no coincide con el ComeCocos */
+.noCoincide {
+  background-color: black; /* Color de fondo para las casillas no seleccionadas */
 }

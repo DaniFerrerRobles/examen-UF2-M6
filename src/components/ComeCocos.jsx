@@ -1,25 +1,22 @@
 import React from "react";
-import "../styles/estilo.css"; // Importamos el archivo de estilos
+import "../styles/estilo.css"; // Asegúrate de tener los estilos correctos
 
-export const ComeCocos = ({ iconoCC, posicionIconoCC }) => {
+const ComeCocos = ({ iconoCC }) => {
   return (
     <div className="divCC">
       {iconoCC.map((fila, idFila) => (
-        <div key={idFila} className="divFilaCC">
+        <div key={idFila} className="divFila">
           {fila.map((casilla, idCasilla) => {
-            const esComeCocos = idFila === posicionIconoCC[0] && idCasilla === posicionIconoCC[1];
-
             return (
-              <div
-                key={idCasilla}
-                className={`divCasillaCC ${esComeCocos ? "coincide" : casilla === 1 ? "noCoincide" : ""}`}
-              ></div>
+              <div key={idCasilla} className="dovCC">
+                {casilla} 
+              </div>
             );
           })}
         </div>
       ))}
     </div>
   );
-}; // Recorremos la matriz de iconoCC y pintamos las casillas, además de verificar la posición del ComeCocos
+};
 
 export default ComeCocos;
