@@ -10,14 +10,14 @@ const Juego = () => {
   const filaCentro = Math.floor(filas / 2);
   const columnaCentro = Math.floor(columnas / 2);
 
-  const [cuadriculaCC, setCuadriculasCC] = useState(modelo.matrizCuadricula);
+  const [cuadriculaCC, setCuadriculaCC] = useState(modelo.matrizCuadricula);
   const [posicionIconoCC, setPosicionIconoCC] = useState([filaCentro, columnaCentro]);
   const [iconoCC, setIconoCC] = useState(modelo.matrizComecocos);
 
   return (
     <div>
       <Cuadricula cuadriculaCC={cuadriculaCC} />
-      <ComeCocos posicionCC={posicionIconoCC} iconoCC={iconoCC} />
+      <ComeCocos iconoCC={iconoCC} posicionIconoCC={posicionIconoCC} />
     </div>
   );
 };

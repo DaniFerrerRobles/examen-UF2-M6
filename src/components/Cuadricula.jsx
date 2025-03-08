@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/estilo.css";
+import "../styles/estilo.css";  // Asegúrate de que el archivo CSS esté correctamente importado.
 
 export const Cuadricula = ({ cuadriculaCC }) => {
   return (
@@ -14,6 +14,5 @@ export const Cuadricula = ({ cuadriculaCC }) => {
     </div>
   );
 };
-//recorremos la matriz de cuadriculaCC y pintamos las casillas
 
 export default Cuadricula;
