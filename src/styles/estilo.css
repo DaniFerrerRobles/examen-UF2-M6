@@ -29,10 +29,13 @@
 .coincide {
   width: 40px;             /* Tamaño de ComeCocos */
   height: 40px;            /* Tamaño de ComeCocos */
-  background-color: yellow; /* Color amarillo para el ComeCocos */
+  background-color: red; /* Color amarillo para el ComeCocos */
 }
 
 /* Estilo cuando una casilla no coincide con el ComeCocos */
 .noCoincide {
   background-color: black; /* Color de fondo para las casillas no seleccionadas */
 }
+
+.fantasma {
+background-color: blue;}

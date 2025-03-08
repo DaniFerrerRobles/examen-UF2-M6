@@ -23,6 +23,10 @@ export const modelo = {
 
   matrizComecocos : [
     [1]
+  ],
+
+  matrizFantasma : [
+    [1]
   ]  
 
 };
