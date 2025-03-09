@@ -4,38 +4,39 @@
   flex-wrap: wrap;
   width: 800px;
   height: 800px;
-  margin-left: 20%;  /* Centrado de la cuadrícula en la página */
-  position: relative; /* Esto es importante para que los elementos posicionados con 'absolute' dentro de ella funcionen */
+  margin-left: 20%;
+  position: relative;
 }
 
-/* Estilo para cada fila dentro de la cuadrícula */
+/* Estilo para las filas */
 .divFila {
-  display: flex;  /* Esto asegura que las casillas se alineen en línea */
-  width: 100%;    /* Las filas ocupan todo el ancho disponible */
+  display: flex;
+  width: 100%;
 }
 
-/* Estilo para cada casilla dentro de la cuadrícula */
+/* Estilo para las casillas */
 .divCasilla {
-  width: 40px;           /* Tamaño de cada casilla */
-  height: 40px;          /* Tamaño de cada casilla */
-  border: 1px solid #ddd; /* Borde ligero para cada casilla */
-  background-color: black; /* Color de fondo para las casillas */
+  width: 40px; 
+  height: 40px;          
+  border: 1px solid #ddd; 
+  background-color: black;
   display: inline-block;
 }
 
 
 
-/* Cuando el ComeCocos coincide con la casilla, le damos un color amarillo */
+/* Cuando el ComeCocos coincide con la casilla, lo pintamos de rojo y le ponemos un tamaño */
 .coincide {
-  width: 40px;             /* Tamaño de ComeCocos */
-  height: 40px;            /* Tamaño de ComeCocos */
-  background-color: red; /* Color amarillo para el ComeCocos */
+  width: 40px;             
+  height: 40px;            
+  background-color: red;
 }
 
-/* Estilo cuando una casilla no coincide con el ComeCocos */
+/* Pintamos de negro las casillas que no coincidan con el come cocos */
 .noCoincide {
-  background-color: black; /* Color de fondo para las casillas no seleccionadas */
+  background-color: black;
 }
 
+/*Pintamos de azul los fantasmas*/
 .fantasma {
 background-color: blue;}

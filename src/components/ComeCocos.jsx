@@ -1,6 +1,8 @@
 import React from "react";
-import "../styles/estilo.css"; // Asegúrate de tener los estilos correctos
+import "../styles/estilo.css";
 
+
+//Creamos y exportamos la función ComeCocos que recibe como parámetro el iconoCC y lo mappeamos para mostrarlo en la pantalla
 const ComeCocos = ({ iconoCC }) => {
   return (
     <div>

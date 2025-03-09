@@ -1,3 +1,5 @@
+//Matrizes para la cuadricula, el comecocos y los fantasmas
+
 export const modelo = {
   matrizCuadricula: [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

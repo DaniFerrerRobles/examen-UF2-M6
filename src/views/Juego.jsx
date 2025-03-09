@@ -69,28 +69,30 @@ const Juego = () => {
           break;
       }
 
+      //Si la posición del come cocos es la misma que la del fantasma, se eliminará el fantasma
       setFantasmas((fantasmas) => {
         const fantasmasRestantes = fantasmas.filter(
           (fantasma) => fantasma.x !== nuevaFila || fantasma.y !== nuevaColumna
         );
-
+        
+        // Si la cantidad de fantasmas restantes es menor que la cantidad de fantasmas iniciales, sumamos un punto
         if (fantasmasRestantes.length < fantasmas.length) {
           setPuntos(puntos + 1);
         }
 
-        // Verificamos si ya no quedan fantasmas y mostramos el mensaje de victoria
+        // Si no quedan fantasmas, GANASTE!!!
         if (fantasmasRestantes.length === 0) {
-          // Aquí directamente mostramos el mensaje en el h2
-          alert("¡Ganaste!"); // Usamos un alert o el mensaje puede ser algo más visible en la UI
+          alert("¡Ganaste!");
         }
-
+      //Devolvemos los fantasmas restantes
         return fantasmasRestantes;
       });
-
+      //Devolvemos la nueva posición del icono de Comecocos
       return [nuevaFila, nuevaColumna];
     });
   };
 
+  //Cuando pulsamos una tecla, se ejecuta la función moverCC
   useEffect(() => {
     window.addEventListener('keydown', moverCC);
     return () => {
@@ -98,6 +100,7 @@ const Juego = () => {
     };
   }, [posicionIconoCC]);
 
+  //Mostramos en la pantalla los puntos, el icono de Comecocos y la cuadrícula
   return (
     <div>
       <h2>Puntos: {puntos}</h2>

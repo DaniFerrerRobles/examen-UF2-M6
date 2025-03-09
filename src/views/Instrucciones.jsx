@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Instrucciones del juego
 const Instrucciones = () => {
     return (
         <div>
