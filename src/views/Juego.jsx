@@ -3,11 +3,10 @@ import modelo from '../components/cuadricula';
 import Cuadricula from '../components/Cuadricula';
 import ComeCocos from '../components/ComeCocos';
 
-// Clase Fantasma
 class Fantasma {
   constructor() {
-    this.x
-    this.y
+    this.x;
+    this.y;
     this.estado = "vivo";
     this.generaPosicionAleatoria();
   }
@@ -15,8 +14,8 @@ class Fantasma {
   generaPosicionAleatoria() {
     const filas = modelo.matrizCuadricula.length;
     const columnas = modelo.matrizCuadricula[0].length;
-    this.x = Math.floor(Math.random() * filas);  // Asigna una fila aleatoria
-    this.y = Math.floor(Math.random() * columnas);  // Asigna una columna aleatoria
+    this.x = Math.floor(Math.random() * filas);
+    this.y = Math.floor(Math.random() * columnas);
   }
 }
 
@@ -24,26 +23,51 @@ const Juego = () => {
   const filas = modelo.matrizCuadricula.length;
   const columnas = modelo.matrizCuadricula[0].length;
 
-  const filaCentro = Math.floor(filas / 2);  // Encontrar la fila central
-  const columnaCentro = Math.floor(columnas / 2);  // Encontrar la columna central
+  const filaCentro = Math.floor(filas / 2);
+  const columnaCentro = Math.floor(columnas / 2);
 
-  // Estado para la cuadrícula, el ComeCocos y su posición
   const [cuadriculaCC, setCuadriculaCC] = useState(modelo.matrizCuadricula);
-  const [posicionIconoCC, setPosicionIconoCC] = useState([filaCentro, columnaCentro]);  // Establecer la posición en el centro
+  const [posicionIconoCC, setPosicionIconoCC] = useState([filaCentro, columnaCentro]);
   const [iconoCC, setIconoCC] = useState(modelo.matrizComecocos);
-
-  // Estado para los fantasmas
   const [fantasmas, setFantasmas] = useState([]);
 
-  // Generar los 5 fantasmas
   useEffect(() => {
     const nuevosFantasmas = [];
     for (let i = 0; i < 5; i++) {
-      const fantasma = new Fantasma();  // Crear una nueva instancia de Fantasma
-      nuevosFantasmas.push(fantasma);   // Añadirlo al array de fantasmas
+      const fantasma = new Fantasma();
+      nuevosFantasmas.push(fantasma);
     }
-    setFantasmas(nuevosFantasmas);  // Actualizar el estado con los nuevos fantasmas
-  }, []); // El array vacío asegura que esto solo se ejecute una vez cuando el componente se monte
+    setFantasmas(nuevosFantasmas);
+  }, []);
+
+  const moverCC = (evento) => {
+    let [fila, columna] = posicionIconoCC;
+
+    switch (evento.key) {
+      case 'ArrowUp':
+        if (fila > 0) fila--;
+        break;
+      case 'ArrowDown':
+        if (fila < filas - 1) fila++;
+        break;
+      case 'ArrowLeft':
+        if (columna > 0) columna--;
+        break;
+      case 'ArrowRight':
+        if (columna < columnas - 1) columna++;
+        break;
+      default:
+        return;
+    }
+    setPosicionIconoCC([fila, columna]);
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', moverCC);
+    return () => {
+      window.removeEventListener('keydown', moverCC);
+    };
+  }, [posicionIconoCC]);
 
   return (
     <div>
